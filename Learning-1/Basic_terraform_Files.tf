@@ -8,7 +8,7 @@ resource "aws_instance" "example" {
 }
 
 resource "aws_s3_bucket" "example" {
-  bucket = "my_first_terraformfile_R07"
+  bucket = "myfirstterraformfiler07"
 
   tags = {
     Name        = "My bucket"
