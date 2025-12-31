@@ -3,9 +3,9 @@ provider "aws" {
     region = "ap-southeast-1"
 }
 
-provider "aws" {
-    alias = "ap-southeast-2"
-    region = "ap-southeast-2"
+provider "google" {
+  project     = "eternal-coral-469909-r3"
+  region      = "us-central1-a"
 }
 
 resource "aws_instance" "mr_mc" {
@@ -14,8 +14,14 @@ resource "aws_instance" "mr_mc" {
     provider = "aws.ap-southeast-1"
 }
 
-resource "aws_instance" "mr_mc_2" {
-    ami = "ami-0b8d527345fdace59"
-    instance_type = "t3.micro"
-    provider = "aws.ap-southeast-2"
+resource "google_storage_bucket" "basic_bucket" {
+  name          = mcphanibucket07          
+  location      = us-central1      
+  storage_class = "STANDARD"
+
+  uniform_bucket_level_access = true
+
+  versioning {
+    enabled = false
+  }
 }
