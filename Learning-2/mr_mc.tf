@@ -1,5 +1,5 @@
 provider "aws" {
-    
+
     region = "ap-southeast-1"
 
 }
@@ -18,7 +18,7 @@ resource "aws_instance" "mr_mc" {
 
 resource "google_storage_bucket" "basic_bucket" {
   name          = "mcphanibucket07"          
-  location      = "us-central1-a"      
+  location      = "us-central1"      
   storage_class = "STANDARD"
 
   uniform_bucket_level_access = true
