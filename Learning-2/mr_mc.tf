@@ -1,6 +1,7 @@
 provider "aws" {
-    alias = "ap-southeast-1"
+    
     region = "ap-southeast-1"
+
 }
 
 provider "google" {
@@ -12,7 +13,7 @@ provider "google" {
 resource "aws_instance" "mr_mc" {
     ami = "ami-00d8fc944fb171e29"
     instance_type = "t3.micro"
-    provider = "aws.ap-southeast-1"
+
 }
 
 resource "google_storage_bucket" "basic_bucket" {
