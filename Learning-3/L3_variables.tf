@@ -19,6 +19,6 @@ variable "gcp_machine_type" {
 variable "gcp_zone" {
   description = "The zone for the GCP compute instance"
   type        = string
-  default     = "us-central1"
+  default     = "us-central1-a"
 }
 
